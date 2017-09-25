@@ -3,24 +3,73 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
+
+<div class="wrapper">
+
+  <div class="box header"><center>Twittler Lite</center></div>
+  <div class="box sidebar">
+    <center>Following</center>
+    <secion class="user"></secion>
+  </div>
+  <div class="box sidebar2">
+    <center>Trending Tweets</center>
+    <secion class="trendingTags"></secion>
+  </div>
+  <div class="box content"><center>Timeline</center>
+    <section class="tweets"></section>
+  </div>
+  <div class="box footer">Footer</div>
+</div>
     <script>
 
       $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+        var $tweets = $('.tweets');
+        var $username = $('.users');
+        $tweets.html('');
+        var $hashtags = $('.trendingTags');
+        $hashtags.html('')
+        var $users = $('.user');
+        $users.html('');
+
 
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
+          var time = streams.home[index];
+          var user = streams.home[index];
+          var $time = $('<div class="timestamp"></div>');
+          var $tweet = $('<div class="message"></div>');
+          var $user = $('<div class="username"></div>');
+          $tweet.text(tweet.message);
+          $time.text(tweet.created_at);
+          $user.text('@' + tweet.user);
+          $user.appendTo($tweets);
+          $tweet.appendTo($tweets);
+          $time.appendTo($tweets);
           index -= 1;
         }
 
-      });
+        var tagIndex = tweets;
+        tagIndex.forEach(function(element) {
+          var hash = element;
+          var $trending = $('<div class="hashtags"></div>');
+          $trending.text(hash);
+          $trending.appendTo($hashtags);
+          tagIndex -= 1;
+        });
+
+        var users = window.users.sort();
+        users.forEach(function(element) {
+          var use = element;
+          var $user = $('<div class="user"></div>');
+          $user.text('@' + use);
+          $user.appendTo($users);
+        });
+
+      }); 
 
     </script>
   </body>
