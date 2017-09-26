@@ -80,5 +80,57 @@ var trendingTweets = function(){
   },[]);
 };
 
+ var getUsers = function() {       
+  var $users = $('.user');
+  $users.html('');
+  var users = window.users.sort();
+  users.forEach(function(element) {
+    var use = element;
+    // var $user = $('<div class="user"></div>');
+    var $user = $('<li></li>');
+    $user.text('@' + use);
+    $user.appendTo($users);
+  });
+}
 var tweets = trendingTweets();
+
+var getTweets = function(tweetBank) {
+  var $tweets = $('.tweets');
+  var $username = $('.user');
+  $tweets.html('');
+  var index = tweetBank.length - 1;
+  while(index >= 0){
+    var tweet = tweetBank[index];
+    var time = tweetBank[index];
+    var user = tweetBank[index];
+    var $time = $('<div class="timestamp"></div>');
+    var $tweet = $('<div class="message"></div>');
+    var $user = $('<div class="user"></div>');
+    $tweet.text(tweet.message);
+    $time.text('Tweeted on: ' + tweet.created_at);
+    $user.text('@' + tweet.user);
+    $user.appendTo($tweets);
+    $tweet.appendTo($tweets);
+    $time.appendTo($tweets);
+    index -= 1;
+  }
+}
+
+var getHashTags = function() {
+  var $hashtags = $('.trendingTags');
+  $hashtags.html('')
+  var tagIndex = tweets;
+  tagIndex.forEach(function(element) {
+    var hash = element;
+    var $trending = $('<div class="hashtags"></div>');
+    $trending.text(hash);
+    $trending.appendTo($hashtags);
+    tagIndex -= 1;
+  });
+}
+
+var getUserTweets = function(user) {
+  var username = user.substring(1);
+  getTweets(streams.users[username])
+}
 

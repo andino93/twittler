@@ -56,9 +56,9 @@ table {
 */
 
 body {
-  /*background: #CCEBDE;
-  color: #353839;*/
-  font: 300 16px/22px sans-serif;
+  background: #A3F1FF;
+  color: #353839;
+  font: 300 16px/22px Helvetica;
 }
 
 /*
@@ -80,6 +80,7 @@ body {
   }
 
   .content {
+    background: #A3F1FF
     grid-area: content;
     grid-column: 2/3;
     grid-row: 2/3;
@@ -133,8 +134,8 @@ body {
   }
 
 .box {
-  background-color: #444;
-  color: #fff;
+  background-color: #ABCFD5;
+  color: #9C6232;
   border-radius: 5px;
   padding: 10px;
   font-size: 150%; 
@@ -143,9 +144,6 @@ body {
   padding: 5px 5px 5px 5px;
 }
 .user {
-  padding: 5px 5px 5px 5px;
-}
-.username{
   font-size: 1.15em;
   padding: 5px 5px 5px 5px;
 }
@@ -159,17 +157,24 @@ body {
 .hashtags {
   padding: 5px 5px 5px 5px;
 }
-.trendingTags{
-  padding: 5px 5px 5px 5px;
+.header {
+  color: #A3F1FF;
 }
-.header,
 .footer {
   background-color: #999;
 }
-
+.refresh {
+  background: #E88B3F;
+    padding: 5px 5px 5px 5px;
+  font-size: .6em;
+  }
 .sidebar2 {
-  background-color: #ccc;
-  color: #444;
+  background-color: #ABCFD5;
+  color: #9C6232;
+}
+ul, li {
+  padding: 5px 5px 5px 5px;
+  list-style:none;
 }
 /**,
 *:before,
