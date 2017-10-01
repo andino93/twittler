@@ -1,6 +1,12 @@
 /*
  * NOTE: This file generates fake tweet data, and is not intended to be part of your implementation.
  * You can safely leave this file untouched, and confine your changes to index.html.
+
+ TODO: 
+ - add function that sorts by trending tags
+ - add function to search for hashtags
+ - on the above, they can prob be helpers for each other
+    - write function to look through userObjs then tweetObjs for hashtags
  */
 
 // set up data structures
@@ -91,7 +97,8 @@ var trendingTweets = function(){
     $user.text('@' + use);
     $user.appendTo($users);
   });
-}
+};
+
 var tweets = trendingTweets();
 
 var getTweets = function(tweetBank) {
@@ -105,7 +112,7 @@ var getTweets = function(tweetBank) {
     var user = tweetBank[index];
     var $time = $('<div class="timestamp"></div>');
     var $tweet = $('<div class="message"></div>');
-    var $user = $('<div class="user"></div>');
+    var $user = $('<ul></ul>');
     $tweet.text(tweet.message);
     $time.text('Tweeted on: ' + tweet.created_at);
     $user.text('@' + tweet.user);
@@ -114,11 +121,11 @@ var getTweets = function(tweetBank) {
     $time.appendTo($tweets);
     index -= 1;
   }
-}
+};
 
 var getHashTags = function() {
   var $hashtags = $('.trendingTags');
-  $hashtags.html('')
+  $hashtags.html('');
   var tagIndex = tweets;
   tagIndex.forEach(function(element) {
     var hash = element;
@@ -127,10 +134,14 @@ var getHashTags = function() {
     $trending.appendTo($hashtags);
     tagIndex -= 1;
   });
-}
+};
 
 var getUserTweets = function(user) {
   var username = user.substring(1);
-  getTweets(streams.users[username])
-}
+  getTweets(streams.users[username]);
+};
 
+var findTrendingTweet = function(tag) {
+  // loop through each user
+  // in each userObj, search tweets that match tag
+};

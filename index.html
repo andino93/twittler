@@ -20,7 +20,7 @@
     <section class="trendingTags"></section>
   </div>
   <div class="box content"><center>Twittles</center>
-    <p align="right"><button class='refresh'>REFRESHING THINGS AWAIT</button></p>
+    <p align="right"><button class='refresh'>Fetch Latest Chatter</button></p>
     <section class="tweets"></section>
   </div>
 </div>
@@ -37,6 +37,18 @@
         $('li').click(function(){
           $(this).closest('.box.sidebar').append(getUserTweets($(this).text()));
         });
+
+        $('ul').click(function(){
+          $(this).closest('.box.sidebar').append(getUserTweets($(this).text()));
+        });
+
+        $('.box.header').click(function() {
+          $('content').append(getTweets(streams.home));
+        });
+
+        // add input window for new tweets
+
+        // add click func to search through trending hashtags
       }); 
 
     </script>

@@ -1,3 +1,8 @@
+/* TODO: 
+  - add boldness to username on tweets
+  - change color pallet to something better to look at
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -145,7 +150,8 @@ body {
 }
 .timestamp {
   font-size: 0.5em;
-  padding: 2px 5px 5px 5px;
+  font-style: italic;
+  padding: 0px 5px 5px 5px;
 }
 .hashtags {
   padding: 5px 5px 5px 5px;
@@ -158,14 +164,20 @@ body {
 }
 .refresh {
   background: #E88B3F;
-    padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
   font-size: .6em;
   }
 .sidebar2 {
   background-color: #ABCFD5;
   color: #9C6232;
 }
-ul, li {
+ul {
+  font-size: 1.15em;
+  font-style: bold;
+  padding: 5px 5px 5px 5px;
+  list-style:none;
+}
+li {
   padding: 5px 5px 5px 5px;
   list-style:none;
 }
