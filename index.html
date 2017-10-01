@@ -11,15 +11,15 @@
 
   <div class="box header"><center><img src="twittler.png"></center></div>
   <div class="box sidebar">
-    <center>Apparently Important:</center>
+    <h1><center>Your Peeps</center></h1>
     <section class="user"><ul></ul></section>
     <!-- <ul class="user"><li>nunonuno</li><li>shawndrost</li></ul> -->
   </div>
   <div class="box sidebar2">
-    <center>Trending Twits</center>
+    <h1><center>Trending Twits</center></h1>
     <section class="trendingTags"></section>
   </div>
-  <div class="box content"><center>Twittles</center>
+  <div class="box content"><h1><center>Twittles</center></h1>
     <p align="right"><button class='refresh'>Fetch Latest Chatter</button></p>
     <section class="tweets"></section>
   </div>
@@ -34,11 +34,7 @@
           $('content').append(getTweets(streams.home));
         });
 
-        $('li').click(function(){
-          $(this).closest('.box.sidebar').append(getUserTweets($(this).text()));
-        });
-
-        $('ul').click(function(){
+        $('li, .tweets ul').click(function() {
           $(this).closest('.box.sidebar').append(getUserTweets($(this).text()));
         });
 

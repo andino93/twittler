@@ -54,8 +54,8 @@ table {
 */
 
 body {
-  background: #A3F1FF;
-  color: #353839;
+  background: #6A797F;
+  color: #353C40;
   font: 300 16px/22px Helvetica;
 }
 
@@ -132,8 +132,8 @@ body {
   }
 
 .box {
-  background-color: #ABCFD5;
-  color: #9C6232;
+  background-color: #D3F2FF;
+  color: #353C40;
   border-radius: 5px;
   padding: 10px;
   font-size: 150%; 
@@ -163,17 +163,16 @@ body {
   background-color: #999;
 }
 .refresh {
-  background: #E88B3F;
+  background: #6A797F;
   padding: 5px 5px 5px 5px;
   font-size: .6em;
   }
 .sidebar2 {
-  background-color: #ABCFD5;
-  color: #9C6232;
+  background-color: #D3F2FF;
+  color: #353C40;
 }
 ul {
   font-size: 1.15em;
-  font-style: bold;
   padding: 5px 5px 5px 5px;
   list-style:none;
 }
@@ -184,10 +183,11 @@ li {
 
 
 h1, h2, h3, h4 {
-  color: #648880;
+  text-decoration: underline;
+  color: #353C40;
 }
 h1, h3, h4, h5, p {
-  margin-bottom: 22px;
+  margin-bottom: 5px;
 }
 h1 {
   font-size: 36px;
