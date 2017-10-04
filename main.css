@@ -54,7 +54,7 @@ table {
 */
 
 body {
-  background: #6A797F;
+  background: #e6ecf0;
   color: #353C40;
   font: 300 16px/22px Helvetica;
 }
@@ -78,7 +78,7 @@ body {
   }
 
   .content {
-    background: #A3F1FF
+    background: #e6ecf0
     grid-area: content;
     grid-column: 2/3;
     grid-row: 2/3;
@@ -93,7 +93,7 @@ body {
   }
 
   .wrapper {
-    background-color: #_;
+    background-color: #e6ecf0;
     color: #444;
     display: grid;
     grid-gap: 1em;
@@ -132,7 +132,7 @@ body {
   }
 
 .box {
-  background-color: #D3F2FF;
+  background-color: #fff;
   color: #353C40;
   border-radius: 5px;
   padding: 10px;
@@ -154,29 +154,33 @@ body {
   padding: 0px 5px 5px 5px;
 }
 .hashtags {
+  color: #009999;
   padding: 5px 5px 5px 5px;
 }
 .header {
-  color: #A3F1FF;
+  color: #fff;
 }
 .footer {
   background-color: #999;
 }
 .refresh {
   background: #6A797F;
+  color: white;
   padding: 5px 5px 5px 5px;
   font-size: .6em;
   }
 .sidebar2 {
-  background-color: #D3F2FF;
+  background-color: #fff;
   color: #353C40;
 }
 ul {
   font-size: 1.15em;
+  color: #009999;
   padding: 5px 5px 5px 5px;
   list-style:none;
 }
 li {
+  color: #009999;
   padding: 5px 5px 5px 5px;
   list-style:none;
 }
